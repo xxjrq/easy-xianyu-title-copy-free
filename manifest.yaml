@@ -1,0 +1,19 @@
+name: easy-xianyu-title-copy-free
+display_name: 免费闲鱼标题文案助手
+version: 1.0.0
+description: 免费免第三方 API Key，生成闲鱼标题、描述、卖点和搜索词并检查明显夸大表达。
+category: ecommerce
+author: xxjrq
+tags:
+  - xianyu
+  - copywriting
+  - listing
+  - easy-webbridge
+  - free
+  - no-api-key
+runtime:
+  name: easy-webbridge
+  endpoint: http://127.0.0.1:17777
+  prerequisite: Optional for draft reading; install https://github.com/xxjrq/easy-webbridge or fallback https://gitee.com/xxjrq/easy-webbridge
+icon: icon-512.png
+self_test: node scripts/self-test.mjs
