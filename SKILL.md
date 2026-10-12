@@ -39,6 +39,14 @@ description: 免费、免第三方 API Key 的闲鱼标题文案助手。用户�
 4. 运行本地词语检查，标出绝对化承诺、虚假稀缺、疑似违规交易和无法证明的品牌/效果描述，给出替代表达，不擅自删除真实关键信息。
 5. 输出多版本文案和修改说明；若连接浏览器，只读取目标草稿做比对，不点击发布或发送。
 
+## 执行
+
+```bash
+node scripts/run.mjs --input /absolute/input.json --output /absolute/result.json
+```
+
+脚本离线完成事实锁定、3～5 个标题、描述、搜索词和风险词检查，不依赖第三方模型或 API Key。输出状态不是 `completed` 时不得进入上架。
+
 ## 输出
 
 输出 JSON 或 Markdown，包含 `titleVariants`、`description`、`sellingPoints`、`searchTerms`、`missingFacts`、`flaggedPhrases`、`disclaimers` 和 `nextAction`。每个标题都应能单独使用，并标记使用了哪些事实。
@@ -59,4 +67,3 @@ description: 免费、免第三方 API Key 的闲鱼标题文案助手。用户�
 ```bash
 node scripts/self-test.mjs
 ```
-
